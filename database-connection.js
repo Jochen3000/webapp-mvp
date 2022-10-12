@@ -1,11 +1,13 @@
 // database-connection.js
 // Where we connect to Airtable and handle requests from server.js
+require('dotenv').config();
 
 // ⚠️ Configure routes between API paths and tables here!
 
 const tableRoutes = {
     ai: 'AI in Science Fiction',
-    properties: 'Science Fiction Properties'
+    properties: 'Science Fiction Properties',
+    mvp: 'table-1'
 };
 
 // ^ These are the tables we'll be loading
