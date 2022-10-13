@@ -5,9 +5,9 @@ require('dotenv').config();
 // ⚠️ Configure routes between API paths and tables here!
 
 const tableRoutes = {
-    ai: 'AI in Science Fiction',
-    properties: 'Science Fiction Properties',
-    mvp: 'table-1'
+    ai: 'AI in Science Fiction', //example route
+    table1: 'table-1',
+    table2: 'table-2'
 };
 
 // ^ These are the tables we'll be loading
@@ -15,6 +15,7 @@ const tableRoutes = {
 // should match to keys in this object, example:
 
 // https://airtable-api-proxy.glitch.me/api/ai/list/0
+// http://127.0.0.1:50809/api/table1/list/0
 // maps to 'AI in Science Fiction'
 
 const viewName = 'Grid view';
