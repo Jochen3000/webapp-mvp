@@ -23,16 +23,6 @@ app.get("/api*", function (request, response) {
   response.status(400).end(JSON.stringify(responseObject));
 });
 
-// when index route accessed, send readme converted to html
-app.get("/", function (req, res) {
-  fs.readFile('README.md', 'utf8', function (err, data) {
-    if (err) {
-      return console.log(err);
-    }
-    res.send(head + markdownConverter.makeHtml(data) + footer);
-  })
-})
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
